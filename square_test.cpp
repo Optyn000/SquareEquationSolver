@@ -20,7 +20,7 @@ void PassedCount()
 {
     int passed = 0;
     AllTests();
-    printf("Верно решённых тестов: %d\n", passed);
+    printf("Count of correctly passed tests: %d\n", passed);
 }
 
 

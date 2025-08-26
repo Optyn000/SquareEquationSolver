@@ -22,43 +22,43 @@ int main()
 
     if (if_equal(a, 0) && if_equal(b, 0) && !if_equal(c, 0))
     {
-        printf("Введено неверное тождество\n");
+        printf("Incorrect identity entered.\n");
         return 0;
     }
 
     if (if_equal(a, 0) && if_equal(b, 0) && if_equal(c, 0))
     {
-        printf("Корнями уравнения являются любые действительные числа\n");
+        printf("The roots of the equation are any real numbers.\n");
         return 0;
     }
 
     if (!if_equal(a, 0) && if_equal(b, 0) && if_equal(c, 0))
     {
-        printf("Уравнение имеет единственный корень. x = 0\n");
+        printf("The equation has a single root. x = 0\n");
         return 0;
     }
 
     if (if_equal(nRoots, 1) && isnan(x2))
     {
-        printf("Уравнение является линейным. x = %lf\n", x1);
+        printf("The equation is linear. x = %lf\n", x1);
         return 0;
     }
 
     if isnan(x1)
     {
-        printf("Уравнение не имеет действительных корней\n");
+        printf("The equation has no real roots.\n");
         return 0;
     }
 
     if (if_equal(x1, x2))
     {
-        printf("Уравнение имеет один корень двойной кратности. x = %lf\n", x1);
+        printf("The equation has one root of double multiplicity. x = %lf\n", x1);
         return 0;
     }
 
     if (if_equal(nRoots, 2))
     {
-        printf("Уравнение имеет два различных действительных корня. x1 = %lf, x2 = %lf\n", x1, x2);
+        printf("The equation has two different real roots. x1 = %lf, x2 = %lf\n", x1, x2);
         return 0;
     }
 }
@@ -68,12 +68,12 @@ void Input(double* a, double* b, double* c)
 {
     int CoeffCount = 0;
 
-    printf("Решение квадратного уравнения\nПоследовательно введите коэффициенты при x через пробел\n");
+    printf("Square Equation Solver.\nEnter the coefficients of x one by one, separated by a space.\n");
     CoeffCount = scanf("%lf %lf %lf", a, b, c);
 
     if (!(CoeffCount == 3))
     {
-        printf("Видимо, вы неправильно ввели коэффициенты уравнения. Извините, программа не работает");
+        printf("Apparently you entered the equation coefficients incorrectly. Sorry, the program doesn't work.");
     }
 }
 
